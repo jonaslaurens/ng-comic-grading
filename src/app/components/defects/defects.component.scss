@@ -1,0 +1,25 @@
+.defects {
+  --columns: 1fr;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-gap: 1em;
+  grid-template-columns: var(--columns);
+  min-height: calc(100vh - 237px);
+
+  @media (min-width: 636px) {
+    grid-template-columns: repeat(2, var(--columns));
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(3, var(--columns));
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(4, var(--columns));
+  }
+
+  @media (min-width: 1600px) {
+    grid-template-columns: repeat(5, var(--columns));
+  }
+}

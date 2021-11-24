@@ -1,0 +1,43 @@
+.intro {
+  width: 100%;
+  height: 100%auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 15px;
+
+  @media (min-width: 500px) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: 800px) {
+    height: calc(100vh - 56px);
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .banger {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 80%;
+  }
+
+  .actions {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 15px 0;
+
+    @media (min-width: 800px) {
+      align-self: flex-end;
+    }
+  }
+
+  .button-right {
+    margin-left: 15px !important;
+  }
+}

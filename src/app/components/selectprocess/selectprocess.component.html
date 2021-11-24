@@ -1,0 +1,28 @@
+<div class="intro">
+  <div class="banger">
+    <h1>Welcome Collector!</h1>
+    <p>Ever wondered what <strong>condition</strong> your comic is in?</p>
+    <p>
+      What <strong>grade</strong> it would get if it would've been graded by CGC
+      or CBCS?
+    </p>
+    <p>
+      <strong>Now is Your chance!</strong>
+    </p>
+    <p>
+      You can get an estimated grade by running through our process. Simply
+      follow each step and select the condition fit to your comic
+    </p>
+    <div class="actions">
+      <app-button [className]="'cga-button'" (click)="onSelectProcess('new')"
+        >Grade Your Book</app-button
+      >
+      <app-button
+        class="button-right"
+        [className]="'cga-button_outline'"
+        (click)="onSelectProcess('pro')"
+        >Done this before?</app-button
+      >
+    </div>
+  </div>
+</div>
