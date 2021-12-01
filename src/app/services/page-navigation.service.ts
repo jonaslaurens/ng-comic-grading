@@ -14,17 +14,18 @@ export class PageNavigationService {
     private router: Router
   ) {}
 
-  nextPage(): void {
-    console.log('next works');
+  getCurrentPage(): number {
+    return this.page;
+  }
 
-    // if (this.page === this.defectService.defects.length - 1) return;
-    // this.page++;
+  nextPage(): void {
+    if (this.page === this.defectService.defects.length - 1) return;
+    this.page++;
   }
 
   previousPage(): void {
-    console.log('previous works');
-    // if (this.page === 0) return;
-    // this.page--;
+    if (this.page === 0) return;
+    this.page--;
   }
 
   skipToLast(): void {
