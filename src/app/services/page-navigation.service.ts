@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DefectsService } from './defects.service';
 
 @Injectable({
@@ -7,16 +8,23 @@ import { DefectsService } from './defects.service';
 export class PageNavigationService {
   page: number = 0;
 
-  constructor(private defectService: DefectsService) {}
+  constructor(
+    private defectService: DefectsService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
-  increasePage(): void | number {
-    if (this.page === this.defectService.defects.length - 1) return;
-    return this.page++;
+  nextPage(): void {
+    console.log('next works');
+
+    // if (this.page === this.defectService.defects.length - 1) return;
+    // this.page++;
   }
 
-  decreasePage(): void {
-    if (this.page === 0) return;
-    this.page--;
+  previousPage(): void {
+    console.log('previous works');
+    // if (this.page === 0) return;
+    // this.page--;
   }
 
   skipToLast(): void {
@@ -26,6 +34,8 @@ export class PageNavigationService {
   setPage(pageNumber: number): void {
     this.page = pageNumber;
   }
+
+  restartProcess(): void {}
 
   // restartProcess: () =>
   //   set((state) => {

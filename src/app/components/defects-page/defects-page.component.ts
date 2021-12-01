@@ -12,9 +12,9 @@ export class DefectsPageComponent implements OnInit {
   defects: Category[] = [];
   currentPage: number = 0;
 
-  constructor(private dfService: DefectsService) {}
+  constructor(private defectsService: DefectsService) {}
 
   ngOnInit(): void {
-    this.defects = this.dfService.getDefects();
+    this.defects = this.defectsService.getDefects();
   }
 }

@@ -14,13 +14,13 @@
       follow each step and select the condition fit to your comic
     </p>
     <div class="actions">
-      <app-button [className]="'cga-button'" (click)="onSelectProcess('new')"
+      <app-button [className]="'cga-button'" routerLink="/new"
         >Grade Your Book</app-button
       >
       <app-button
         class="button-right"
         [className]="'cga-button_outline'"
-        (click)="onSelectProcess('pro')"
+        routerLink="/pro"
         >Done this before?</app-button
       >
     </div>
