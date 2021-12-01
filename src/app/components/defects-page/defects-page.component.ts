@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/app/interfaces/Category';
 import { DefectsService } from 'src/app/services/defects.service';
 import { PageNavigationService } from 'src/app/services/page-navigation.service';
@@ -10,16 +11,13 @@ import { PageNavigationService } from 'src/app/services/page-navigation.service'
   providers: [DefectsService],
 })
 export class DefectsPageComponent implements OnInit {
-  defects: Category[] = [];
-  currentPage: number = 0;
-
   constructor(
-    private defectsService: DefectsService,
-    private pageNav: PageNavigationService
+    private defectService: DefectsService,
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.defects = this.defectsService.getDefects();
-    this.currentPage = this.pageNav.getCurrentPage();
+    this.router.navigate([0], { relativeTo: this.route });
   }
 }
